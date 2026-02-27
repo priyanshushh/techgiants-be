@@ -7,7 +7,7 @@ import logging
 import json
 
 app = Flask(__name__)
-CORS(app, origins=["https://techgiants-60066171561.development.catalystserverless.in"], supports_credentials=True)
+CORS(app, origins=["https://techgiants-60066171561.development.catalystserverless.in"])
 
 # ── Logger setup ─────────────────────────────────────────────
 logging.basicConfig(
@@ -69,7 +69,7 @@ def get_bucket_details():
 #  CHAT ENDPOINT — Zoho Catalyst QuickML LLM
 # ══════════════════════════════════════════════════════════════════════════════
 
-@app.route('/chat', methods=['GET'])
+@app.route('/chat', methods=['POST'])
 def chat():
     # ── Log incoming request ─────────────────────────────────
     logger.info("▶ REQUEST  %s %s", request.method, request.path)
@@ -77,10 +77,10 @@ def chat():
 
     try:
         # ── Parse & validate input ───────────────────────────
-        # body = request.get_json(force=True) or {}
-        # logger.info("  Body   : %s", json.dumps(body))
-        prompt = request.args.get("prompt")
-        # prompt = (body.get("prompt") or "").strip()
+        body = request.get_json(force=True) or {}
+        logger.info("  Body   : %s", json.dumps(body))
+
+        prompt = (body.get("prompt") or "").strip()
         if not prompt:
             return jsonify({
                 "status": "error",
@@ -88,15 +88,10 @@ def chat():
             }), 400
 
         # ── Allow optional overrides from request body ───────
-        # temperature = body.get("temperature", 0.7)
-        # max_tokens  = body.get("max_tokens", 512)
-        # top_p       = body.get("top_p", 0.9)
-        # top_k       = body.get("top_k", 50)
-
-        temperature = 0.7
-        max_tokens  =512
-        top_p       = 0.9
-        top_k       =  50
+        temperature = body.get("temperature", 0.7)
+        max_tokens  = body.get("max_tokens", 512)
+        top_p       = body.get("top_p", 0.9)
+        top_k       = body.get("top_k", 50)
 
         # ── Build QuickML request ────────────────────────────
         quickml_headers = {
