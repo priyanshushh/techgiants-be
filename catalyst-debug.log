@@ -1,0 +1,104 @@
+[debug] [2026-02-27T16:13:05.303Z] : 
+[debug] [2026-02-27T16:13:05.305Z] : ----------------------------------------------------------------------
+[debug] [2026-02-27T16:13:05.305Z] : Command:      /Users/rushikesh/.nvm/versions/node/v24.3.0/bin/node /Users/rushikesh/.nvm/versions/node/v24.3.0/bin/catalyst deploy appsail
+[debug] [2026-02-27T16:13:05.305Z] : CLI Version:  1.24.0
+[debug] [2026-02-27T16:13:05.305Z] : Platform:     darwin
+[debug] [2026-02-27T16:13:05.305Z] : Node Version: v24.3.0
+[debug] [2026-02-27T16:13:05.305Z] : Time:         Fri Feb 27 2026 21:43:05 GMT+0530 (India Standard Time)
+[debug] [2026-02-27T16:13:05.305Z] : ----------------------------------------------------------------------
+[debug] [2026-02-27T16:13:05.305Z] : 
+[debug] [2026-02-27T16:13:05.596Z] : > authorizing via signed-in user option
+[debug] [2026-02-27T16:13:05.596Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.appsail.Update"]
+[debug] [2026-02-27T16:13:05.601Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/31294000000013015 
+
+[debug] [2026-02-27T16:13:05.827Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 27 Feb 2026 16:13:05 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2026-02-27T16:13:05.830Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/31294000000013015/environment 
+
+[debug] [2026-02-27T16:13:05.909Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 27 Feb 2026 16:13:05 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2026-02-27T16:13:05.916Z] : --source option not specified. Hence, using Catalyst runtime
+[debug] [2026-02-27T16:13:29.159Z] : [Error: ENOENT: no such file or directory, open '/Users/rushikesh/tech-be/be/app-config.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/rushikesh/tech-be/be/app-config.json'
+}
+[debug] [2026-02-27T16:13:29.160Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/get-details 
+Query params: {"feature_name":"runtime"}
+
+[debug] [2026-02-27T16:13:29.340Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 27 Feb 2026 16:13:29 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2026-02-27T16:15:31.842Z] : [Error: EPERM: operation not permitted, scandir '/Library/Bluetooth'] {
+  errno: -1,
+  code: 'EPERM',
+  syscall: 'scandir',
+  path: '/Library/Bluetooth'
+}
+[warn] [2026-02-27T16:15:31.846Z] : ⚠ Deploy of AppSail [techgiants] was unsuccessful since EPERM: operation not permitted, scandir '/Library/Bluetooth'
+[info] [2026-02-27T16:15:31.846Z] : 
+[error] [2026-02-27T16:15:31.846Z] : ✖ AppSail Deploy failed
+[debug] [2026-02-27T16:15:31.847Z] : NO ERRORS REGISTERED
+[debug] [2026-02-27T16:15:31.847Z] : EXEC ENDED with event: appsail, message: success
+[debug] [2026-02-27T16:15:31.847Z] : TOTAL DURATION OF COMMAND EXEC : 146255
+[debug] [2026-02-27T16:15:32.063Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.in/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2026-02-27T16:15:33.036Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 27 Feb 2026 16:15:33 GMT","content-length":"0","connection":"keep-alive","x-content-type-options":"nosniff","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2026-02-27T16:17:11.447Z] : 
+[debug] [2026-02-27T16:17:11.452Z] : ----------------------------------------------------------------------
+[debug] [2026-02-27T16:17:11.453Z] : Command:      /Users/rushikesh/.nvm/versions/node/v24.3.0/bin/node /Users/rushikesh/.nvm/versions/node/v24.3.0/bin/catalyst deploy appsail
+[debug] [2026-02-27T16:17:11.453Z] : CLI Version:  1.24.0
+[debug] [2026-02-27T16:17:11.453Z] : Platform:     darwin
+[debug] [2026-02-27T16:17:11.453Z] : Node Version: v24.3.0
+[debug] [2026-02-27T16:17:11.453Z] : Time:         Fri Feb 27 2026 21:47:11 GMT+0530 (India Standard Time)
+[debug] [2026-02-27T16:17:11.453Z] : ----------------------------------------------------------------------
+[debug] [2026-02-27T16:17:11.453Z] : 
+[debug] [2026-02-27T16:17:11.756Z] : > authorizing via signed-in user option
+[debug] [2026-02-27T16:17:11.756Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.appsail.Update"]
+[debug] [2026-02-27T16:17:11.760Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/31294000000013015 
+
+[debug] [2026-02-27T16:17:12.065Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 27 Feb 2026 16:17:12 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2026-02-27T16:17:12.070Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/31294000000013015/environment 
+
+[debug] [2026-02-27T16:17:12.148Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 27 Feb 2026 16:17:12 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2026-02-27T16:17:12.160Z] : --source option not specified. Hence, using Catalyst runtime
+[debug] [2026-02-27T16:17:21.810Z] : [Error: ENOENT: no such file or directory, open '/Users/rushikesh/tech-be/be/app-config.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/rushikesh/tech-be/be/app-config.json'
+}
+[debug] [2026-02-27T16:17:21.812Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/get-details 
+Query params: {"feature_name":"runtime"}
+
+[debug] [2026-02-27T16:17:22.089Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 27 Feb 2026 16:17:22 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2026-02-27T16:17:36.307Z] : [Error: EPERM: operation not permitted, scandir '/Library/Bluetooth'] {
+  errno: -1,
+  code: 'EPERM',
+  syscall: 'scandir',
+  path: '/Library/Bluetooth'
+}
+[warn] [2026-02-27T16:17:36.307Z] : ⚠ Deploy of AppSail [techgiants] was unsuccessful since EPERM: operation not permitted, scandir '/Library/Bluetooth'
+[info] [2026-02-27T16:17:36.308Z] : 
+[error] [2026-02-27T16:17:36.308Z] : ✖ AppSail Deploy failed
+[debug] [2026-02-27T16:17:36.308Z] : NO ERRORS REGISTERED
+[debug] [2026-02-27T16:17:36.308Z] : EXEC ENDED with event: appsail, message: success
+[debug] [2026-02-27T16:17:36.308Z] : TOTAL DURATION OF COMMAND EXEC : 24558
+[debug] [2026-02-27T16:17:36.583Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.in/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2026-02-27T16:17:36.875Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 27 Feb 2026 16:17:36 GMT","content-length":"0","connection":"keep-alive","x-content-type-options":"nosniff","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+

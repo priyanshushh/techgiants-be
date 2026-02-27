@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "31294000000013015",
+      "name": "techgiants",
+      "domain": {
+        "id": "50039383787",
+        "name": "techgiants-60066171561.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60066171561",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}
