@@ -85,12 +85,12 @@ def chat():
                 "message": "prompt is required in request body"
             }), 400
 
-        # ── Extract auth token from Catalyst request headers ─
-        auth_token = request.headers.get("Authorization", "")
-        if not auth_token:
-            # Fallback: try building from Catalyst cookie/header
-            cookie = request.headers.get("Cookie", "")
-            auth_token = f"Zoho-oauthtoken {cookie}" if cookie else ""
+        # # ── Extract auth token from Catalyst request headers ─
+        # auth_token = request.headers.get("Authorization", "")
+        # if not auth_token:
+        #     # Fallback: try building from Catalyst cookie/header
+        #     cookie = request.headers.get("Cookie", "")
+        #     auth_token = f"Zoho-oauthtoken {cookie}" if cookie else ""
 
         # ── Allow optional overrides from request body ───────
         temperature = body.get("temperature", 0.7)
