@@ -7,7 +7,7 @@ import logging
 import json
 
 app = Flask(__name__)
-CORS(app, origins=["https://techgiants-rgcz-vrlomksv.onslate.in/"])
+CORS(app, origins=["https://techgiants-60066171561.development.catalystserverless.in"])
 
 # ── Logger setup ─────────────────────────────────────────────
 logging.basicConfig(
