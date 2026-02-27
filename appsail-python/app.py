@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import zcatalyst_sdk
 import requests as http_requests
 import os
@@ -6,6 +7,7 @@ import logging
 import json
 
 app = Flask(__name__)
+CORS(app)
 
 # ── Logger setup ─────────────────────────────────────────────
 logging.basicConfig(
@@ -85,13 +87,6 @@ def chat():
                 "message": "prompt is required in request body"
             }), 400
 
-        # # ── Extract auth token from Catalyst request headers ─
-        # auth_token = request.headers.get("Authorization", "")
-        # if not auth_token:
-        #     # Fallback: try building from Catalyst cookie/header
-        #     cookie = request.headers.get("Cookie", "")
-        #     auth_token = f"Zoho-oauthtoken {cookie}" if cookie else ""
-
         # ── Allow optional overrides from request body ───────
         temperature = body.get("temperature", 0.7)
         max_tokens  = body.get("max_tokens", 512)
@@ -101,7 +96,6 @@ def chat():
         # ── Build QuickML request ────────────────────────────
         quickml_headers = {
             "Content-Type":  "application/json",
-            "Authorization": auth_token,
             "CATALYST-ORG":  CATALYST_ORG,
         }
 
